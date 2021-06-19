@@ -11,13 +11,110 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <title>MyBootstrapAdmin</title>
   </head>
   <body>
+
+    <header> <!-- text-center：中央揃え  text-light：文字色を白   p-5；paddingを5 -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Admin</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ホーム</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">お知らせ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- containerクラスのサイズ一覧    https://getbootstrap.com/docs/5.0/layout/containers/ -->
+    <div class="container mt-5"> <!-- mt-5：margin-topを５ -->
+
+      <section class="row">
+
+        <section class="col-md-4 mb-5">
+          <!-- https://getbootstrap.com/docs/5.0/components/list-group/  のlink and button からコピペ -->
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+              ユーザー情報
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">アクセス状況</a>
+            <a href="#" class="list-group-item list-group-item-action">各種設定</a>
+          </div>
+        </section>
+
+        <section class="col-md-8">
+          <!-- https://getbootstrap.com/docs/5.0/utilities/flex/#align-items  align-itemsの詳細 -->
+          <header class="border-bottom pb-2 mb-3 d-flex align-items-center">  <!--  border-bottom：下線を引く  pb-2：padding-bottomを２  mb-3：margin-bottomを３  d-flex：display:flexをつける  -->
+            <h1 class="fs-5 m-0">ユーザー情報</h1>  <!-- fs-5：フォントサイズ５  -->
+            <!-- https://getbootstrap.com/docs/5.0/components/buttons/  からボタンをコピペ -->
+            <button type="button" class="btn btn-primary btn-sm ms-auto">
+              <!-- アイコンはここから確認できる   https://icons.getbootstrap.com/ -->
+              <i class="bi bi-person-plus-fill me-1"></i> <!-- me-1：margin-rightの１（※ margin end の略で右がendを表す） -->
+              追加
+            </button>  <!-- btn-sm：ボタンを小さくする   ms-auto：margin-left:auto が付与（※margin startの略 bootstrapでは左右をstartとendで表す） -->
+          </header>
+
+
+          <p>現在登録しているユーザーに関する情報です</p>
+          <!-- https://getbootstrap.com/docs/5.0/content/tables/  のoverview部分のテーブルをコピペ -->
+          <table class="table table-striped table-bordered"> <!-- table：それっぽいテーブルのデザインにする  table-striped：互い違いで背景色を変える  table-bordered：違うスタイルのボーダーをつける -->
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </section>
+
+
+
+    </div> <!-- containerここまで -->
+
+    <footer class="bg-secondary text-center text-light p-5 mt-5"> <!-- bg-secondary：背景色をグレー  text-center：中央揃え  text-light：文字色を白  p-5：paddingを５  mt-5：margin-topを５ -->
+      (C) admin.com
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
